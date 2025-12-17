@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Vehicle Detail — AutoGuard AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body{font-family:Arial,sans-serif;padding:20px;background:#f4f7fb}
+    .container{max-width:900px;background:white;padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    .top { display:flex; justify-content:space-between; align-items:center; }
+    .big { font-size:36px; font-weight:700; }
+    .small { color:#666; }
+    table{width:100%; border-collapse:collapse; margin-top:12px}
+    th,td{padding:8px;text-align:left;border-bottom:1px solid #eee}
+    .slider { width:100%; margin-top:10px }
+    .btn { padding:10px 14px; border-radius:6px; cursor:pointer; border:none }
+    .btn-primary { background:#2a7de1;color:white }
+    .status { font-weight:700; padding:6px 10px; border-radius:8px }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <div>
+        <div id="vehName" class="small">Vehicle</div>
+        <div class="big" id="riskValue">Risk: --%</div>
+        <div class="small" id="vehStatus"></div>
+      </div>
+      <div style="text-align:right">
+        <button id="bookBtn" class="btn btn-primary">Book Service</button>
+        <div id="bookResult" class="small" style="margin-top:8px"></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:18px">Top Causes (explainability)</h3>
+    <ul id="topCauses"></ul>
+
+    <h3>Factor Contributions</h3>
+    <table>
+      <thead><tr><th>Factor</th><th>Value</th><th>Weight</th><th>Contribution</th></tr></thead>
+      <tbody id="contribTable"></tbody>
+    </table>
+
+    <h3 style="margin-top:12px">Counterfactual — reduce harsh braking</h3>
+    <div>
+      <input id="harshSlider" class="slider" type="range" min="0" max="100" value="0">
+      <div class="small">Reduce harsh braking by <span id="harshPercent">0</span>% → projected risk: <strong id="projectedRisk">--%</strong></div>
+    </div>
+
+    <div style="margin-top:16px" id="fixSuggestion" class="small"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/vehicle.js"></script>
+</body>
+</html>

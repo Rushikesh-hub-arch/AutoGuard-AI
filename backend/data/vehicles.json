@@ -1,0 +1,64 @@
+{
+  "vehicles": [
+    {
+      "id": "VH-1001",
+      "name": "bike 1001",
+      "engine_temp": 70,
+      "harsh_braking": 85,
+      "vibration": 60,
+      "health_score": 62,
+      "status": "Warning",
+      "risk_pct": 72.75
+    },
+    {
+      "id": "VH-1002",
+      "name": "Truck 1002",
+      "engine_temp": 45,
+      "harsh_braking": 30,
+      "vibration": 25,
+      "health_score": 88,
+      "status": "Normal",
+      "risk_pct": 34.75
+    },
+    {
+      "id": "VH-1003",
+      "name": "Van 2003",
+      "engine_temp": 80,
+      "harsh_braking": 70,
+      "vibration": 75,
+      "health_score": 55,
+      "status": "Critical",
+      "risk_pct": 74.25
+    },
+    {
+      "id": "VH-1004",
+      "name": "Car 3004",
+      "engine_temp": 60,
+      "harsh_braking": 50,
+      "vibration": 40,
+      "health_score": 74,
+      "status": "Normal",
+      "risk_pct": 55.0
+    },
+    {
+      "id": "VH-1005",
+      "name": "Bus 5005",
+      "engine_temp": 75,
+      "harsh_braking": 90,
+      "vibration": 85,
+      "health_score": 48,
+      "status": "Critical",
+      "risk_pct": 82.75
+    },
+    {
+      "id": "VH-1006",
+      "name": "Van 6006",
+      "engine_temp": 50,
+      "harsh_braking": 40,
+      "vibration": 35,
+      "health_score": 82,
+      "status": "Normal",
+      "risk_pct": 42.75
+    }
+  ]
+}

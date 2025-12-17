@@ -1,0 +1,209 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2933;
+  padding: 24px;
+}
+
+/* ===== Page Title ===== */
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ===== Grid Layout ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 6px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Card Header ===== */
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ===== Health Pill ===== */
+.pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+/* ===== Status Colors ===== */
+.green {
+  background: #16a34a;
+}
+
+.yellow {
+  background: #f59e0b;
+}
+
+.red {
+  background: #dc2626;
+}
+
+/* ===== Status Border Accent ===== */
+.card .green ~ & {
+  border-left-color: #16a34a;
+}
+
+.card .yellow ~ & {
+  border-left-color: #f59e0b;
+}
+
+.card .red ~ & {
+  border-left-color: #dc2626;
+}
+
+/* ===== Text Info ===== */
+.card p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.card p strong {
+  color: #111827;
+}
+
+/* ===== Responsive Touch ===== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 18px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  background: #2a7de1;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 12px;
+  color: #666;
+}
+
+.nav-right {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-item {
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #2a7de1;
+}
+
+.nav-item.active {
+  font-weight: bold;
+  color: #2a7de1;
+}
+/* ===== Page Header ===== */
+.page-header {
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc, #eef3fb);
+  padding: 22px 16px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: #555;
+}
+
+.summary-bar {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+.summary-box {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.summary-box strong {
+  font-size: 22px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AutoGuard AI — Fleet Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* minimal inline css so it looks okay immediately */
+    body { font-family: Arial, sans-serif; padding: 20px; background:#f4f7fb; color:#111; }
+    h1 { margin-bottom: 6px; }
+    .vehicle-list { display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+    .card { background:white; padding:12px; border-radius:8px; width:220px; box-shadow:0 2px 6px rgba(0,0,0,0.06); cursor:pointer; }
+    .pill { display:inline-block; padding:4px 8px; border-radius:12px; font-weight:600; }
+    .green { background:#e6f6ea; color:#2a8f46 }
+    .yellow { background:#fff6e0; color:#a86b00 }
+    .red { background:#ffeaea; color:#c62828 }
+    .small { font-size:13px; color:#555; margin-top:6px; }
+  </style>
+</head>
+<body> 
+    <nav class="navbar">
+  <div class="nav-left">
+    <div class="logo">AG</div>
+    <div class="app-name">
+      <strong>AutoGuard AI</strong>
+      <span class="tagline">Fleet Health Monitor</span>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <span class="nav-item active">Dashboard</span>
+    <span class="nav-item">Vehicles</span>
+    <span class="nav-item">Analytics</span>
+    <span class="nav-item">Service</span>
+  </div>
+</nav>
+
+  <div class="page-header">
+  <h1>Fleet Dashboard</h1>
+  <p>Monitor vehicle health, risk signals, and service readiness in real time</p>
+</div>
+
+
+<div id="summary" class="summary-bar"></div>
+
+  <div id="vehicleContainer" class="vehicle-list"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/risk.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
